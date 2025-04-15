@@ -1,0 +1,94 @@
+import React from "react";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Github, Linkedin, Mail, Globe } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <main className="p-6 md:p-10 max-w-5xl mx-auto space-y-8">
+      <section className="space-y-2">
+        <h1 className="text-4xl font-bold">Vicky Kumar</h1>
+        <p className="text-lg text-gray-600">AI Engineer | Full-Stack ML Engineer | AI Engineer Research</p>
+        <div className="flex gap-4 mt-2">
+          <a href="mailto:npdimagine@gmail.com" target="_blank"><Mail /></a>
+          <a href="https://github.com/algsoch" target="_blank"><Github /></a>
+          <a href="https://linkedin.com/in/algsoch" target="_blank"><Linkedin /></a>
+          <a href="https://app.algsoch.tech" target="_blank"><Globe /></a>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
+        <p className="text-gray-700">
+          I’m an AI Engineer and Data Science student at IIT Madras, passionate about building intelligent, autonomous platforms. I created the Vicky Platform – a real-time AI Assistant system capable of dynamic backend execution, pattern recognition, automated DevOps tasks, and complex file handling. My expertise includes deploying production-ready FastAPI apps integrated with LangChain, YouTube transcription, webhook APIs, GitHub Actions, and custom shell agents.
+        </p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
+        <div className="grid md:grid-cols-2 gap-6">
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold">Vicky App – AI Assistant Interface</h3>
+              <p className="text-sm text-gray-600 mt-2">
+                Accessible via <a className="text-blue-500 underline" href="https://app.algsoch.tech" target="_blank">app.algsoch.tech</a>, Vicky App is the UI-driven assistant built on top of <strong>vicky_server.py</strong>. It handles user queries, triggers backend logic dynamically, and supports:
+                terminal commands, repo creation, Docker image builds, GitHub workflow setup, image compression/base64 encoding-decoding, pattern and file recognition. It also integrates with Discord/Slack for alerts.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold">Vicky Server – Intelligent Core Engine</h3>
+              <p className="text-sm text-gray-600 mt-2">
+                A FastAPI-powered logic engine that processes YouTube transcripts, matches 1000+ question formats via regex/phonetic matching, dynamically executes code, and handles real-time webhook/file pipelines. Supports LangChain integration and question-driven DevOps execution logic.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent className="p-4">
+              <h3 className="text-xl font-bold">DevOps Automation – Shell Agent</h3>
+              <p className="text-sm text-gray-600 mt-2">
+                Designed as part of <strong>vicky_server.py</strong>, this CLI agent runs terminal-level commands, builds Docker environments, creates GitHub Actions/Workflows, auto-generates project files, and streamlines cloud deploy scripts (ngrok, cloudflared, Azure).
+              </p>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
+        <ul className="list-disc pl-6 text-gray-700 space-y-1">
+          <li>Languages: Python, JavaScript, SQL, Java, C, HTML/CSS</li>
+          <li>ML/AI: PyTorch, Sklearn, OpenCV, Pandas, NumPy, Seaborn, LangChain</li>
+          <li>Backend: FastAPI, Flask, MongoDB, REST APIs, Regex, DuckDB</li>
+          <li>Deployment: Docker, Azure, ngrok, Vercel, cloudflared</li>
+          <li>Tools: GitHub Actions, Postman, CVAT, YouTube API, VS Code</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Education</h2>
+        <ul className="text-gray-700 space-y-2">
+          <li><strong>IIT Madras</strong> – B.S. Data Science and Applications (May 2024 – May 2028)<br />Courses: Machine Learning, Python, Tools of Data Science, Statistics and ML Foundations,Machine learning Technique, Business Data Management</li>
+          <li><strong>12th – CBSE</strong> (PCM) – Govt Sarvodaya Co-Ed Vidyalaya, 2023</li>
+          <li><strong>10th – CBSE</strong> – Govt Sarvodaya Co-Ed Vidyalaya, 2021</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Languages</h2>
+        <p className="text-gray-700">English (C1 – Advanced), Hindi (Native)</p>
+      </section>
+
+      <section>
+        <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
+        <ul className="list-disc pl-6 text-gray-700 space-y-1">
+          <li>IIT Madras Foundation Certificate – Programming and Data Science</li>
+          <li>LangChain Advanced Applications (via Yoututbe(CammpusX) and Self-Driven Projects)</li>
+        </ul>
+      </section>
+    </main>
+  );
+}
