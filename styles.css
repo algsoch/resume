@@ -1,0 +1,161 @@
+.card {
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.loader {
+    border: 3px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 3px solid #3498db;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+    display: inline-block;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+/* Add dark mode styles */
+:root {
+    --background: #f9fafb;
+    --card-bg: #ffffff;
+    --text: #111827;
+    --muted: #4b5563;
+  }
+  
+  .dark {
+    --background: #1f2937;
+    --card-bg: #111827;
+    --text: #f3f4f6;
+    --muted: #9ca3af;
+  }
+  
+  .dark body {
+    background-color: var(--background);
+    color: var(--text);
+  }
+  
+  .dark .bg-white {
+    background-color: var(--card-bg);
+  }
+  
+  .dark .text-gray-700 {
+    color: #e5e7eb;
+  }
+  
+  .dark .text-gray-600 {
+    color: #d1d5db;
+  }
+  
+  .dark input, .dark textarea {
+    background-color: #374151;
+    color: #f3f4f6;
+    border-color: #4b5563;
+  }
+  /* Add animation styles */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  
+  .fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .dark .bg-gradient-to-br.from-indigo-50.to-blue-50 {
+    background: linear-gradient(135deg, rgba(67, 56, 202, 0.1), rgba(37, 99, 235, 0.1));
+  }
+  
+  .dark .border-indigo-100 {
+    border-color: rgba(67, 56, 202, 0.3);
+  }
+.hidden {
+    display: none;
+}
+
+.typing-indicator {
+    display: flex;
+}
+
+.typing-indicator span {
+    width: 8px;
+    height: 8px;
+    margin: 0 1px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: bounce 1.5s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+}
+
+.chat-container {
+    height: 300px;
+    overflow-y: auto;
+}
+
+.user-message {
+    background-color: #e6f7ff;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    max-width: 80%;
+    align-self: flex-end;
+}
+
+.ai-message {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 8px 12px;
+    margin-bottom: 8px;
+    max-width: 80%;
+}
+
+#github-stats {
+    transition: all 0.3s ease;
+}
+
+.grid-cols-52 {
+    grid-template-columns: repeat(52, minmax(0, 1fr));
+}
+/* Add these styles for the floating download button */
+
+@keyframes bounce-slow {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+  }
+  
+  .animate-bounce-slow {
+    animation: bounce-slow 3s infinite;
+  }
+  
+  .group:hover .group-hover\:animate-bounce {
+    animation: bounce 1s infinite;
+  }
+  /* Add typewriter cursor styles */
+.cursor {
+    display: inline-block;
+    width: 2px;
+    background-color: currentColor;
+    margin-left: 2px;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+  }

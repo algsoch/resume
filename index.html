@@ -1,94 +1,698 @@
-import React from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Globe } from "lucide-react";
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicky Kumar | AI Engineer</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-50">
+  <!-- Add this after the opening <body> tag -->
+<div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 z-50 w-0"></div>
+  <!-- Add this right after the opening <body> tag -->
+<button id="theme-toggle" class="fixed top-5 right-5 z-50 p-2 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-all">
+  <i class="fas fa-sun text-yellow-500 dark:hidden"></i>
+  <i class="fas fa-moon text-blue-300 hidden dark:block"></i>
+</button>
+    <!-- Replace the header section with this centered version -->
+<section class="text-center py-10 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg shadow-sm">
+  <h1 class="text-5xl font-bold mb-3">Vicky Kumar</h1>
+  <p class="text-xl text-gray-600 mb-5">AI Engineer | Full-Stack ML Engineer | AI Engineer Research</p>
+  
+  <div class="flex justify-center gap-6 mt-4">
+      <a href="mailto:npdimagine@gmail.com" class="flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors" target="_blank">
+          <i class="fas fa-envelope text-xl"></i>
+          <span class="hidden md:inline">Email</span>
+      </a>
+      <a href="https://github.com/algsoch" class="flex items-center gap-2 text-gray-800 hover:text-black transition-colors" target="_blank">
+          <i class="fab fa-github text-xl"></i>
+          <span class="hidden md:inline">GitHub</span>
+      </a>
+      <a href="https://linkedin.com/in/algsoch" class="flex items-center gap-2 text-blue-700 hover:text-blue-900 transition-colors" target="_blank">
+          <i class="fab fa-linkedin text-xl"></i>
+          <span class="hidden md:inline">LinkedIn</span>
+      </a>
+      <a href="https://app.algsoch.tech" class="flex items-center gap-2 text-green-600 hover:text-green-800 transition-colors" target="_blank">
+          <i class="fas fa-globe text-xl"></i>
+          <span class="hidden md:inline">Portfolio</span>
+      </a>
+  </div>
+</section>
+<!-- Replace your current About Me section with this stylish version -->
 
-export default function Portfolio() {
-  return (
-    <main className="p-6 md:p-10 max-w-5xl mx-auto space-y-8">
-      <section className="space-y-2">
-        <h1 className="text-4xl font-bold">Vicky Kumar</h1>
-        <p className="text-lg text-gray-600">AI Engineer | Full-Stack ML Engineer | AI Engineer Research</p>
-        <div className="flex gap-4 mt-2">
-          <a href="mailto:npdimagine@gmail.com" target="_blank"><Mail /></a>
-          <a href="https://github.com/algsoch" target="_blank"><Github /></a>
-          <a href="https://linkedin.com/in/algsoch" target="_blank"><Linkedin /></a>
-          <a href="https://app.algsoch.tech" target="_blank"><Globe /></a>
+<section id="about-me-section" class="p-6 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-lg shadow-md mb-8 relative overflow-hidden">
+  <!-- Background Pattern -->
+  <div class="absolute inset-0 opacity-5">
+    <div class="absolute right-0 top-0 h-24 w-24">
+      <svg viewBox="0 0 100 100" class="h-full w-full" fill="currentColor">
+        <path d="M0 0 L100 0 L100 100 Z" class="text-indigo-500"></path>
+      </svg>
+    </div>
+    <div class="absolute left-0 bottom-0 h-24 w-24 transform rotate-180">
+      <svg viewBox="0 0 100 100" class="h-full w-full" fill="currentColor">
+        <path d="M0 0 L100 0 L100 100 Z" class="text-blue-500"></path>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative z-10">
+    <div class="flex items-center mb-6">
+      <div class="p-3 bg-indigo-100 rounded-full mr-4">
+        <i class="fas fa-user-alt text-indigo-600 text-xl"></i>
+      </div>
+      <h2 class="text-2xl font-bold text-indigo-700">About Me</h2>
+      
+      <div class="ml-auto flex space-x-2">
+        <button id="template-default" class="px-3 py-1 text-xs rounded-full bg-indigo-600 text-white">Default</button>
+        <button id="template-research" class="px-3 py-1 text-xs rounded-full bg-gray-200 hover:bg-indigo-600 hover:text-white transition-colors">Research</button>
+        <button id="template-engineer" class="px-3 py-1 text-xs rounded-full bg-gray-200 hover:bg-indigo-600 hover:text-white transition-colors">Engineer</button>
+      </div>
+    </div>
+    
+    <div class="bg-white bg-opacity-80 rounded-lg p-5 backdrop-filter backdrop-blur-sm border border-indigo-100">
+      <div class="flex flex-col md:flex-row gap-6">
+        <div class="md:w-1/4">
+          <div class="aspect-square rounded-full overflow-hidden border-4 border-indigo-100 shadow-lg mx-auto" style="max-width: 150px;">
+            <!-- Profile photo or placeholder -->
+            <div class="bg-gradient-to-br from-indigo-400 to-blue-500 h-full flex items-center justify-center text-white text-4xl font-bold">
+              VK
+            </div>
+          </div>
+          
+          <div class="mt-4 text-center">
+            <p id="role-title" class="font-medium text-indigo-800">AI Engineer</p>
+            <p class="text-sm text-gray-500">IIT Madras</p>
+          </div>
+        </div>
+        
+        <div class="md:w-3/4">
+          <!-- Template 1: Default - Data Scientist -->
+          <div id="template-1" class="template-content">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Dynamic and execution-focused <span class="text-indigo-600 font-medium">Data Scientist and Software Engineer</span> from IIT Madras with a builder's mindset and proven ability to ship AI-powered products end-to-end. Creator of <span class="text-indigo-600 font-medium">"Vicky Data Science Assistant,"</span> a robust platform integrating FastAPI, webhook automations, code execution, and intelligent query handling without LLM dependency.
+            </p>
+            
+            <p class="text-gray-700 leading-relaxed">
+              Skilled in building backend architectures, automating workflows, and deploying scalable ML systems with tools like Azure, Vercel, and cloudflared. Thrives in fast-paced startup environments, combining deep technical knowledge with product thinking to deliver measurable impact.
+            </p>
+            
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-indigo-100 text-indigo-800 text-sm">
+                <i class="fas fa-code mr-1"></i> Full-Stack
+              </span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm">
+                <i class="fas fa-database mr-1"></i> Data Science
+              </span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm">
+                <i class="fas fa-rocket mr-1"></i> Ship Fast
+              </span>
+            </div>
+          </div>
+          
+          <!-- Template 2: Research -->
+          <div id="template-2" class="template-content hidden">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Highly motivated <span class="text-indigo-600 font-medium">AI researcher-in-training</span> and Data Science student at IIT Madras, with a passion for building intelligent systems grounded in mathematical rigor and real-world relevance. Strong command over machine learning, optimization, linear algebra, and statistics, complemented by hands-on development of advanced platforms like the <span class="text-indigo-600 font-medium">"Vicky Data Science Assistant"</span> using Python, FastAPI, LangChain, and DuckDB.
+            </p>
+            
+            <p class="text-gray-700 leading-relaxed">
+              Experienced in designing LLM-free reasoning engines, file processing tools, and full-stack research platforms. Actively seeking research internships under leading professors in AI, NLP, or applied ML to contribute to impactful academic and industry-aligned research.
+            </p>
+            
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-purple-100 text-purple-800 text-sm">
+                <i class="fas fa-microscope mr-1"></i> Research
+              </span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-pink-100 text-pink-800 text-sm">
+                <i class="fas fa-brain mr-1"></i> AI Systems
+              </span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm">
+                <i class="fas fa-university mr-1"></i> Academic
+              </span>
+            </div>
+          </div>
+          
+          <!-- Template 3: Engineer -->
+          <div id="template-3" class="template-content hidden">
+            <p class="text-gray-700 leading-relaxed mb-4">
+              Versatile and results-oriented <span class="text-indigo-600 font-medium">Data Scientist and Software Engineer</span> currently pursuing B.S. at IIT Madras. Adept at full-stack AI solution development, backend engineering, and data intelligence platforms. Key projects include building <span class="text-indigo-600 font-medium">"Vicky Data Science Assistant"</span> — a large-scale assistant integrating custom code execution, user query classification, and LLM-free automation.
+            </p>
+            
+            <p class="text-gray-700 leading-relaxed">
+              Strong in Python, LangChain, DuckDB, and distributed API deployment on Azure and Vercel. Passionate about scaling intelligent systems and solving high-impact problems in cutting-edge tech environments. Actively seeking high-caliber internships at tech giants and fast-growing unicorns.
+            </p>
+            
+            <div class="mt-6 flex flex-wrap gap-2">
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-blue-100 text-blue-800 text-sm">
+                <i class="fas fa-cogs mr-1"></i> Software Engineering
+              </span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm">
+                <i class="fas fa-server mr-1"></i> Backend
+              </span>
+              <span class="inline-flex items-center px-3 py-1 rounded-full bg-red-100 text-red-800 text-sm">
+                <i class="fas fa-bolt mr-1"></i> High-Impact
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="relative bg-white rounded-lg shadow-md p-6">
+  <h2 class="text-2xl font-semibold mb-6 text-blue-700">Work Experience</h2>
+  <div class="border-l-2 border-blue-400 pl-6 ml-3 space-y-8">
+      <!-- Outlier Platform -->
+      <div class="relative">
+          <div class="absolute -left-8 w-4 h-4 rounded-full bg-blue-500"></div>
+          <div class="card p-4 bg-blue-50 border border-blue-100 rounded-lg">
+              <div class="flex flex-col md:flex-row justify-between">
+                  <div>
+                      <h3 class="text-xl font-bold text-blue-700">Prompt Engineer & AI Trainer</h3>
+                      <p class="text-gray-700">Outlier Platform</p>
+                  </div>
+                  <div class="text-blue-600 mt-1 md:mt-0">
+                      <p>Oct 2024 - Feb 2025</p>
+                      <p class="text-sm">Remote</p>
+                  </div>
+              </div>
+              <ul class="mt-3 list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Train AI systems in 10+2 level mathematics and advanced calculus.</li>
+                  <li>Teach various programming languages, including Python, Java, HTML, CSS, Ruby, JavaScript.</li>
+                  <li>Develop structured lessons and exercises for AI's understanding of coding concepts.</li>
+                  <li>Foster problem-solving skills and computational thinking in AI systems.</li>
+                  <li>Data Annotation & Labelling for refining AI training models.</li>
+                  <li>Collaborate with data scientists and ML engineers.</li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- Avid Surgico -->
+      <div class="relative">
+          <div class="absolute -left-8 w-4 h-4 rounded-full bg-blue-500"></div>
+          <div class="card p-4 bg-green-50 border border-green-100 rounded-lg">
+              <div class="flex flex-col md:flex-row justify-between">
+                  <div>
+                      <h3 class="text-xl font-bold text-green-700">Web Developer & Data Entry Intern</h3>
+                      <p class="text-gray-700">Avid Surgico</p>
+                  </div>
+                  <div class="text-green-600 mt-1 md:mt-0">
+                      <p>Feb 2024 - Jul 2024</p>
+                      <p class="text-sm">Remote</p>
+                  </div>
+              </div>
+              <ul class="mt-3 list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Developed a responsive website for AVD Surgico.</li>
+                  <li>Designed a user-friendly dashboard with product catalog and pagination.</li>
+                  <li>Integrated client feedback management for better service quality.</li>
+                  <li>Utilized HTML, CSS, JavaScript, and MongoDB.</li>
+                  <li>Improved user retention through intuitive design.</li>
+                  <li>Performed data extraction from<!-- filepath: c:\Users\npdim\Dropbox\resume\index.html -->
+<!-- Replace the Work Experience section -->
+<section class="relative bg-white rounded-lg shadow-md p-6">
+  <h2 class="text-2xl font-semibold mb-6 text-blue-700">Work Experience</h2>
+  <div class="border-l-2 border-blue-400 pl-6 ml-3 space-y-8">
+      <!-- Outlier Platform -->
+      <div class="relative">
+          <div class="absolute -left-8 w-4 h-4 rounded-full bg-blue-500"></div>
+          <div class="card p-4 bg-blue-50 border border-blue-100 rounded-lg">
+              <div class="flex flex-col md:flex-row justify-between">
+                  <div>
+                      <h3 class="text-xl font-bold text-blue-700">Prompt Engineer & AI Trainer</h3>
+                      <p class="text-gray-700">Outlier Platform</p>
+                  </div>
+                  <div class="text-blue-600 mt-1 md:mt-0">
+                      <p>Oct 2024 - Feb 2025</p>
+                      <p class="text-sm">Remote</p>
+                  </div>
+              </div>
+              <ul class="mt-3 list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Train AI systems in 10+2 level mathematics and advanced calculus.</li>
+                  <li>Teach various programming languages, including Python, Java, HTML, CSS, Ruby, JavaScript.</li>
+                  <li>Develop structured lessons and exercises for AI's understanding of coding concepts.</li>
+                  <li>Foster problem-solving skills and computational thinking in AI systems.</li>
+                  <li>Data Annotation & Labelling for refining AI training models.</li>
+                  <li>Collaborate with data scientists and ML engineers.</li>
+              </ul>
+          </div>
+      </div>
+
+      <!-- Avid Surgico -->
+      <div class="relative">
+          <div class="absolute -left-8 w-4 h-4 rounded-full bg-blue-500"></div>
+          <div class="card p-4 bg-green-50 border border-green-100 rounded-lg">
+              <div class="flex flex-col md:flex-row justify-between">
+                  <div>
+                      <h3 class="text-xl font-bold text-green-700">Web Developer & Data Entry Intern</h3>
+                      <p class="text-gray-700">Avid Surgico</p>
+                  </div>
+                  <div class="text-green-600 mt-1 md:mt-0">
+                      <p>Feb 2024 - Jul 2024</p>
+                      <p class="text-sm">Remote</p>
+                  </div>
+              </div>
+              <ul class="mt-3 list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Developed a responsive website for AVD Surgico.</li>
+                  <li>Designed a user-friendly dashboard with product catalog and pagination.</li>
+                  <li>Integrated client feedback management for better service quality.</li>
+                  <li>Utilized HTML, CSS, JavaScript, and MongoDB.</li>
+                  <li>Improved user retention through intuitive design.</li>
+                        <li>Performed extensive data entry tasks, including extracting data from PDFs and organizing them into professional documents.</li>
+                        <li>Created polished, image-rich catalogs and refined company documentation for a more professional presentation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="card">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Vicky App – AI Assistant Interface</h3>
+                        <p class="text-sm text-gray-600 mt-2">
+                            Accessible via <a class="text-blue-500 underline" href="https://app.algsoch.tech" target="_blank">app.algsoch.tech</a>, Vicky App is the UI-driven assistant built on top of <strong>vicky_server.py</strong>. It handles user queries, triggers backend logic dynamically, and supports:
+                            terminal commands, repo creation, Docker image builds, GitHub workflow setup, image compression/base64 encoding-decoding, pattern and file recognition. It also integrates with Discord/Slack for alerts.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">Vicky Server – Intelligent Core Engine</h3>
+                        <p class="text-sm text-gray-600 mt-2">
+                            A FastAPI-powered logic engine that processes YouTube transcripts, matches 1000+ question formats via regex/phonetic matching, dynamically executes code, and handles real-time webhook/file pipelines. Supports LangChain integration and question-driven DevOps execution logic.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold">DevOps Automation – Shell Agent</h3>
+                        <p class="text-sm text-gray-600 mt-2">
+                            Designed as part of <strong>vicky_server.py</strong>, this CLI agent runs terminal-level commands, builds Docker environments, creates GitHub Actions/Workflows, auto-generates project files, and streamlines cloud deploy scripts (ngrok, cloudflared, Azure).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Replace your current Skills section with this visually enhanced version -->
+
+<section class="p-6 bg-gradient-to-r from-indigo-50 to-purple-50 rounded-lg shadow-md mb-8">
+  <h2 class="text-2xl font-semibold mb-6 text-indigo-700 flex items-center">
+    <i class="fas fa-code mr-3 text-indigo-500"></i>
+    Skills
+  </h2>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+    <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-medium text-lg text-indigo-600 mb-2 flex items-center">
+        <i class="fas fa-laptop-code mr-2"></i>
+        Languages
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Python</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">JavaScript</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">SQL</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Java</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">C</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">HTML/CSS</span>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-medium text-lg text-indigo-600 mb-2 flex items-center">
+        <i class="fas fa-brain mr-2"></i>
+        ML/AI
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">PyTorch</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Sklearn</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">OpenCV</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Pandas</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">NumPy</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">LangChain</span>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-medium text-lg text-indigo-600 mb-2 flex items-center">
+        <i class="fas fa-server mr-2"></i>
+        Backend
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">FastAPI</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Flask</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">MongoDB</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">REST APIs</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Regex</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">DuckDB</span>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-medium text-lg text-indigo-600 mb-2 flex items-center">
+        <i class="fas fa-cloud mr-2"></i>
+        Deployment
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Docker</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Azure</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">ngrok</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Vercel</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">cloudflared</span>
+      </div>
+    </div>
+    
+    <div class="p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+      <h3 class="font-medium text-lg text-indigo-600 mb-2 flex items-center">
+        <i class="fas fa-tools mr-2"></i>
+        Tools
+      </h3>
+      <div class="flex flex-wrap gap-2">
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">GitHub Actions</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">Postman</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">CVAT</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">YouTube API</span>
+        <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">VS Code</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <!-- Replace your current Education section with this stylish version -->
+
+<section class="p-6 bg-gradient-to-br from-yellow-50 to-orange-50 rounded-lg shadow-md mb-8">
+  <h2 class="text-2xl font-semibold mb-6 text-yellow-700 flex items-center">
+    <i class="fas fa-graduation-cap mr-3 text-yellow-600"></i>
+    Education
+  </h2>
+  
+  <div class="space-y-5">
+    <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-gray-800">IIT Madras</h3>
+          <p class="text-md text-yellow-600">B.S. Data Science and Applications</p>
+        </div>
+        <div class="mt-2 md:mt-0">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm">
+            May 2024 – May 2028
+          </span>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h4 class="text-sm font-medium text-gray-700 mb-2">Relevant Coursework:</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-yellow-50 rounded-full text-xs">Machine Learning</span>
+          <span class="px-3 py-1 bg-yellow-50 rounded-full text-xs">Python</span>
+          <span class="px-3 py-1 bg-yellow-50 rounded-full text-xs">Tools of Data Science</span>
+          <span class="px-3 py-1 bg-yellow-50 rounded-full text-xs">Statistics and ML Foundations</span>
+          <span class="px-3 py-1 bg-yellow-50 rounded-full text-xs">Machine Learning Technique</span>
+          <span class="px-3 py-1 bg-yellow-50 rounded-full text-xs">Business Data Management</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-gray-800">Govt Sarvodaya Co-Ed Vidyalaya</h3>
+          <p class="text-md text-yellow-600">12th – CBSE (PCM)</p>
+        </div>
+        <div class="mt-2 md:mt-0">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm">
+            2023
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all">
+      <div class="flex flex-col md:flex-row justify-between">
+        <div>
+          <h3 class="text-xl font-bold text-gray-800">Govt Sarvodaya Co-Ed Vidyalaya</h3>
+          <p class="text-md text-yellow-600">10th – CBSE</p>
+        </div>
+        <div class="mt-2 md:mt-0">
+          <span class="inline-flex items-center px-3 py-1 rounded-full bg-yellow-100 text-yellow-800 text-sm">
+            2021
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="p-6 bg-gradient-to-br from-indigo-50 to-blue-50 rounded-lg shadow-md mb-8 fade-in-section">
+
+<!-- Replace your current Certifications section with this version -->
+<section class="p-6 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-lg shadow-md mb-8">
+  <h2 class="text-2xl font-semibold mb-6 text-blue-700 flex items-center">
+    <i class="fas fa-certificate mr-3 text-blue-500"></i>
+    Certifications
+  </h2>
+  
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all flex">
+      <div class="bg-blue-100 rounded-lg p-3 flex items-center justify-center mr-4">
+        <i class="fas fa-university text-blue-500 text-xl"></i>
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-800">IIT Madras Foundation Certificate</h3>
+        <p class="text-sm text-gray-600">Programming and Data Science</p>
+        <div class="flex items-center mt-2 text-sm text-blue-600">
+          <i class="fas fa-check-circle mr-1"></i>
+          <span>Verified</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-all flex">
+      <div class="bg-blue-100 rounded-lg p-3 flex items-center justify-center mr-4">
+        <i class="fab fa-youtube text-blue-500 text-xl"></i>
+      </div>
+      <div>
+        <h3 class="font-bold text-gray-800">LangChain Advanced Applications</h3>
+        <p class="text-sm text-gray-600">via Youtube(CammpusX) and Self-Driven Projects</p>
+        <div class="flex items-center mt-2 text-sm text-blue-600">
+          <i class="fas fa-code-branch mr-1"></i>
+          <span>Practical Implementation</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>  
+       <!-- Replace your current Languages section with this version -->
+
+       <section class="p-6 bg-gradient-to-br from-purple-50 to-indigo-50 rounded-lg shadow-md mb-8">
+        <h2 class="text-2xl font-semibold mb-6 text-purple-700 flex items-center">
+          <i class="fas fa-language mr-3 text-purple-500"></i>
+          Languages
+        </h2>
+        
+        <div class="flex flex-wrap gap-5 justify-center">
+          <div class="bg-white p-5 rounded-lg shadow-sm w-64 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-16 h-16">
+              <div class="absolute transform rotate-45 bg-gradient-to-br from-yellow-400 to-yellow-500 text-white text-xs font-bold py-1 right-[-35px] top-[15px] w-[140px] text-center">
+                Native
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <span class="text-3xl mr-3">🇮🇳</span>
+              <h3 class="text-lg font-semibold">Hindi</h3>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-600">Reading</span>
+                <div class="bg-gray-200 h-2 rounded-full w-2/3">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-600">Writing</span>
+                <div class="bg-gray-200 h-2 rounded-full w-2/3">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-600">Speaking</span>
+                <div class="bg-gray-200 h-2 rounded-full w-2/3">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 100%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white p-5 rounded-lg shadow-sm w-64 relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-16 h-16">
+              <div class="absolute transform rotate-45 bg-gradient-to-br from-blue-400 to-blue-500 text-white text-xs font-bold py-1 right-[-35px] top-[15px] w-[140px] text-center">
+                C1 Advanced
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <span class="text-3xl mr-3">🇺🇸</span>
+              <h3 class="text-lg font-semibold">English</h3>
+            </div>
+            <div class="space-y-2">
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-600">Reading</span>
+                <div class="bg-gray-200 h-2 rounded-full w-2/3">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-600">Writing</span>
+                <div class="bg-gray-200 h-2 rounded-full w-2/3">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 85%"></div>
+                </div>
+              </div>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-600">Speaking</span>
+                <div class="bg-gray-200 h-2 rounded-full w-2/3">
+                  <div class="bg-purple-500 h-2 rounded-full" style="width: 80%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
+      <!-- Add this section after your Projects or Skills section -->
+<section class="p-6 bg-gradient-to-r from-gray-50 to-blue-50 rounded-lg shadow-md mb-8">
+  <h2 class="text-2xl font-semibold mb-6 text-blue-700 flex items-center">
+    <i class="fab fa-github mr-3 text-blue-500"></i>
+    GitHub Contributions
+  </h2>
+  
+  <div id="github-stats" class="w-full">
+    <!-- GitHub stats will be loaded dynamically by loadGitHubStats() function -->
+    <div class="flex justify-center p-8">
+      <div class="loader"></div>
+    </div>
+  </div>
+  
+  <div class="mt-4 text-center text-sm text-gray-600">
+    <p>See more projects on my <a href="https://github.com/algsoch" class="text-blue-600 hover:underline" target="_blank">GitHub profile</a></p>
+  </div>
+</section>
+    <!-- Floating Icons -->
+    <div class="fixed bottom-5 right-5 flex flex-col space-y-3 z-50">
+        <button id="chat-icon" class="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all">
+            <i class="fas fa-comment-dots text-xl"></i>
+        </button>
+        
+        <button id="feedback-icon" class="bg-green-500 hover:bg-green-600 text-white rounded-full w-14 h-14 flex items-center justify-center shadow-lg transition-all">
+            <i class="fas fa-comment text-xl"></i>
+        </button>
+    </div>
 
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">About Me</h2>
-        <p className="text-gray-700">
-          I’m an AI Engineer and Data Science student at IIT Madras, passionate about building intelligent, autonomous platforms. I created the Vicky Platform – a real-time AI Assistant system capable of dynamic backend execution, pattern recognition, automated DevOps tasks, and complex file handling. My expertise includes deploying production-ready FastAPI apps integrated with LangChain, YouTube transcription, webhook APIs, GitHub Actions, and custom shell agents.
-        </p>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <Card>
-            <CardContent className="p-4">
-              <h3 className="text-xl font-bold">Vicky App – AI Assistant Interface</h3>
-              <p className="text-sm text-gray-600 mt-2">
-                Accessible via <a className="text-blue-500 underline" href="https://app.algsoch.tech" target="_blank">app.algsoch.tech</a>, Vicky App is the UI-driven assistant built on top of <strong>vicky_server.py</strong>. It handles user queries, triggers backend logic dynamically, and supports:
-                terminal commands, repo creation, Docker image builds, GitHub workflow setup, image compression/base64 encoding-decoding, pattern and file recognition. It also integrates with Discord/Slack for alerts.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-4">
-              <h3 className="text-xl font-bold">Vicky Server – Intelligent Core Engine</h3>
-              <p className="text-sm text-gray-600 mt-2">
-                A FastAPI-powered logic engine that processes YouTube transcripts, matches 1000+ question formats via regex/phonetic matching, dynamically executes code, and handles real-time webhook/file pipelines. Supports LangChain integration and question-driven DevOps execution logic.
-              </p>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardContent className="p-4">
-              <h3 className="text-xl font-bold">DevOps Automation – Shell Agent</h3>
-              <p className="text-sm text-gray-600 mt-2">
-                Designed as part of <strong>vicky_server.py</strong>, this CLI agent runs terminal-level commands, builds Docker environments, creates GitHub Actions/Workflows, auto-generates project files, and streamlines cloud deploy scripts (ngrok, cloudflared, Azure).
-              </p>
-            </CardContent>
-          </Card>
+    <!-- Floating Chat Box -->
+    <div id="floating-chat" class="fixed bottom-20 right-5 w-80 md:w-96 bg-white rounded-lg shadow-xl z-50 transition-all transform scale-0 origin-bottom-right">
+        <div class="bg-blue-500 text-white p-3 rounded-t-lg flex justify-between items-center">
+            <div>
+                <h3 class="font-bold">Vicky's Assistant</h3>
+                <p class="text-xs">Ask about my skills & experience</p>
+            </div>
+            <button id="close-chat" class="text-white hover:text-gray-200">
+                <i class="fas fa-times"></i>
+            </button>
         </div>
-      </section>
+        <div id="floating-chat-messages" class="h-64 overflow-y-auto p-3 flex flex-col">
+            <div class="ai-message">
+                <p><strong>AI assistant is currently training.</strong></p>
+                <p class="text-sm text-gray-500 mt-1">This feature will be available soon!</p>
+                <p class="text-sm mt-3">In the meantime, you can check out Vicky's:</p>
+                <ul class="text-sm list-disc pl-5 mt-1">
+                    <li>Experience at Outlier Platform as a Prompt Engineer</li>
+                    <li>Web development work at Avid Surgico</li>
+                    <li>Technical projects including Vicky App and Vicky Server</li>
+                    <li>Skills in Python, JavaScript, and FastAPI</li>
+                </ul>
+            </div>
+        </div>
+        <div id="floating-typing-indicator" class="px-3 pb-2 hidden">
+            <div class="typing-indicator">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        <div class="p-3 border-t">
+            <div class="flex">
+                <input type="text" id="floating-chat-input" class="flex-1 p-2 border rounded-l" placeholder="Ask about Vicky...">
+                <button id="floating-send-message" class="bg-blue-500 text-white px-4 py-2 rounded-r">Send</button>
+            </div>
+        </div>
+    </div>
 
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Skills</h2>
-        <ul className="list-disc pl-6 text-gray-700 space-y-1">
-          <li>Languages: Python, JavaScript, SQL, Java, C, HTML/CSS</li>
-          <li>ML/AI: PyTorch, Sklearn, OpenCV, Pandas, NumPy, Seaborn, LangChain</li>
-          <li>Backend: FastAPI, Flask, MongoDB, REST APIs, Regex, DuckDB</li>
-          <li>Deployment: Docker, Azure, ngrok, Vercel, cloudflared</li>
-          <li>Tools: GitHub Actions, Postman, CVAT, YouTube API, VS Code</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Education</h2>
-        <ul className="text-gray-700 space-y-2">
-          <li><strong>IIT Madras</strong> – B.S. Data Science and Applications (May 2024 – May 2028)<br />Courses: Machine Learning, Python, Tools of Data Science, Statistics and ML Foundations,Machine learning Technique, Business Data Management</li>
-          <li><strong>12th – CBSE</strong> (PCM) – Govt Sarvodaya Co-Ed Vidyalaya, 2023</li>
-          <li><strong>10th – CBSE</strong> – Govt Sarvodaya Co-Ed Vidyalaya, 2021</li>
-        </ul>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Languages</h2>
-        <p className="text-gray-700">English (C1 – Advanced), Hindi (Native)</p>
-      </section>
-
-      <section>
-        <h2 className="text-2xl font-semibold mb-4">Certifications</h2>
-        <ul className="list-disc pl-6 text-gray-700 space-y-1">
-          <li>IIT Madras Foundation Certificate – Programming and Data Science</li>
-          <li>LangChain Advanced Applications (via Yoututbe(CammpusX) and Self-Driven Projects)</li>
-        </ul>
-      </section>
-    </main>
-  );
-}
+    <!-- Floating Feedback Form -->
+    <div id="floating-feedback" class="fixed bottom-20 right-5 w-80 md:w-96 bg-white rounded-lg shadow-xl z-50 transition-all transform scale-0 origin-bottom-right">
+        <div class="bg-green-500 text-white p-3 rounded-t-lg flex justify-between items-center">
+            <div>
+                <h3 class="font-bold">Leave Feedback</h3>
+                <p class="text-xs">Help me improve my resume</p>
+            </div>
+            <button id="close-feedback" class="text-white hover:text-gray-200">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="p-4">
+            <form id="floating-feedback-form">
+                <div class="mb-3">
+                    <label for="feedback-name" class="block text-gray-700 mb-1 text-sm">Name</label>
+                    <input type="text" id="feedback-name" class="w-full p-2 border rounded text-sm" required>
+                </div>
+                <div class="mb-3">
+                    <label for="feedback-email" class="block text-gray-700 mb-1 text-sm">Email</label>
+                    <input type="email" id="feedback-email" class="w-full p-2 border rounded text-sm" required>
+                </div>
+                <div class="mb-3">
+                    <label for="feedback-message" class="block text-gray-700 mb-1 text-sm">Feedback</label>
+                    <textarea id="feedback-message" rows="3" class="w-full p-2 border rounded text-sm" required></textarea>
+                </div>
+                <button type="submit" class="w-full bg-green-500 hover:bg-green-600 text-white p-2 rounded">Submit Feedback</button>
+                <div id="floating-form-status" class="mt-2 hidden text-sm"></div>
+            </form>
+        </div>
+    </div>
+<div class="fixed bottom-5 left-5 z-40 animate-bounce-slow">
+  <a href="vickyresume.pdf" download class="group flex items-center bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-3 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:scale-105">
+    <div class="p-2 bg-white bg-opacity-20 rounded-full mr-2">
+      <i class="fas fa-file-download text-white"></i>
+    </div>
+    <span>Download CV</span>
+    <i class="fas fa-arrow-down ml-2 group-hover:animate-bounce"></i>
+  </a>
+</div>
+    <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.0/build/qrcode.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+<div id="pdf-modal" class="fixed inset-0 bg-black bg-opacity-50 z-[100] hidden flex items-center justify-center">
+  <div class="bg-white dark:bg-gray-800 rounded-lg w-11/12 max-w-4xl h-5/6 p-1 flex flex-col">
+    <div class="flex justify-between items-center p-4 border-b dark:border-gray-700">
+      <h2 class="text-xl font-bold dark:text-white">Resume Preview</h2>
+      <button id="close-pdf-modal" class="text-gray-500 hover:text-gray-700 dark:hover:text-gray-300">
+        <i class="fas fa-times text-xl"></i>
+      </button>
+    </div>
+    <div class="flex-1 overflow-hidden">
+      <iframe id="pdf-iframe" class="w-full h-full"></iframe>
+    </div>
+    <div class="p-4 border-t dark:border-gray-700 flex justify-between items-center">
+      <p class="text-sm text-gray-500 dark:text-gray-400">
+        Viewing PDF resume preview
+      </p>
+      <a href="vickyresume.pdf" download class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 transition-colors">
+        <i class="fas fa-download"></i>
+        Download PDF
+      </a>
+    </div>
+  </div>
+</div>
+</body>
+</html>

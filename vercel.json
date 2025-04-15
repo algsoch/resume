@@ -1,0 +1,17 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "api/main.py", "use": "@vercel/python" },
+      { "src": "package.json", "use": "@vercel/next" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "api/main.py" },
+      { "src": "/(.*)", "dest": "/" }
+    ],
+    "env": {
+      "GITHUB_TOKEN": "@github_token",
+      "DISCORD_WEBHOOK": "@discord_webhook",
+      "SLACK_WEBHOOK": "@slack_webhook",
+      "MISTRAL_API_KEY": "@mistral_api_key"
+    }
+  }
